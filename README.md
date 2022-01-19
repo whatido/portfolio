@@ -1,2 +1,2 @@
 # Vtuber
-https://whatido.github.io/portfolio/
+https://whatido.github.io/vtuber/
