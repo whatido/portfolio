@@ -27,47 +27,10 @@ body {
   overflow: hidden;
   border: 10px solid #458285;
   position: relative; }
-
-.main {
-  width: 100%;
-  height: 80vh;
-  margin: 10vh 0;
-  border: 10px solid #458285;
-  overflow: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; }
-
-.main::-webkit-scrollbar {
-  display: none; }
-
-.container {
-  max-width: calc(100% - 20px);
-  padding: unset !important;
-  margin: unset !important; }
-
-.welcome {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  z-index: 99;
-  font-family: 'Changa One';
-  color: white;
-  font-size: 26px;
-  animation-name: tada;
-  animation-duration: 2s; }
-
-.live {
-  font-family: 'Changa One';
-  color: #FFF;
-  font-size: 33px;
-  text-align: center;
-  background-color: #458285;
-  width: 200px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-bottom-right-radius: 32px; }
+  @media only screen and (max-width: 480px) {
+    body {
+      border: unset;
+      overflow: unset; } }
 
 ul {
   margin-left: -25px; }
@@ -120,6 +83,67 @@ ul {
     background-color: #cccccc; }
   ul li[type="kala"] #author-name {
     color: #cccccc; }
+
+.main {
+  width: 100%;
+  height: 80vh;
+  margin: 10vh 0;
+  border: 10px solid #458285;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+  @media only screen and (max-width: 768px) {
+    .main {
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (max-width: 480px) {
+    .main {
+      margin: 20px 0;
+      grid-template-columns: 1fr; } }
+
+.main::-webkit-scrollbar {
+  display: none; }
+
+.container {
+  max-width: calc(100% - 20px);
+  padding: unset !important;
+  margin: unset !important; }
+  @media only screen and (max-width: 480px) {
+    .container {
+      max-width: 100%; } }
+
+.welcome {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  z-index: 99;
+  font-family: 'Changa One';
+  color: white;
+  font-size: 26px;
+  animation-name: tada;
+  animation-duration: 2s; }
+  @media only screen and (max-width: 1024px) {
+    .welcome {
+      font-size: 20px; } }
+  @media only screen and (max-width: 768px) {
+    .welcome {
+      font-size: 14px; } }
+  @media only screen and (max-width: 480px) {
+    .welcome {
+      position: unset;
+      padding-top: 66px; } }
+
+.live {
+  font-family: 'Changa One';
+  color: #FFF;
+  font-size: 33px;
+  text-align: center;
+  background-color: #458285;
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 32px; }
 
 .streamchat {
   background-color: #61afb9;
@@ -176,6 +200,14 @@ ul {
   bottom: 231px;
   right: 430px;
   z-index: 999; }
+  @media only screen and (max-width: 1024px) {
+    .runa {
+      bottom: 245px;
+      right: 366px; } }
+  @media only screen and (max-width: 480px) {
+    .runa {
+      bottom: 211px;
+      right: 179px; } }
 
 .chibi {
   position: absolute; }
@@ -324,25 +356,30 @@ aside {
   border: 10px solid #458285;
   margin: 5px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 2; }
   aside .title {
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.4);
     width: 100%;
     height: 32px;
-    overflow: hidden;
+    overflow: auto;
     position: absolute;
     top: -32px;
-    left: 0; }
+    left: 0;
+    z-index: 1; }
   aside .description {
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.4);
     width: 100%;
     height: 60px;
-    overflow: hidden;
+    overflow: auto;
     position: absolute;
     bottom: -60px;
-    left: 0; }
+    left: 0;
+    z-index: 1; }
+  aside .description::-webkit-scrollbar, aside .title::-webkit-scrollbar {
+    display: none; }
 
 aside:hover .title {
   top: 0;
@@ -371,6 +408,11 @@ aside:hover .description {
     opacity: 1;
     -webkit-transform: translateZ(0);
     transform: translateZ(0); } }
+@media only screen and (max-width: 480px) {
+  .SocialAll {
+    position: relative;
+    width: 100%;
+    height: 43px; } }
 .Social {
   position: absolute;
   bottom: 0;

@@ -3,6 +3,14 @@
 	bottom: 231px;
 	right: 430px;
 	z-index: 999;
+	@include Responsive(MD) {
+		bottom: 245px;
+		right: 366px;
+	}
+	@include Responsive(XS) {
+		bottom: 211px;
+		right: 179px;
+	}
 }
 
 // spite

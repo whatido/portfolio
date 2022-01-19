@@ -4,25 +4,31 @@ aside {
 	margin: 5px;
 	position: relative;
 	overflow: hidden;
+	z-index: 2;
     .title {
         font-weight: bold;
         background-color: rgba(255, 255, 255, .4);
 		width: 100%;
 		height: 32px;
-		overflow: hidden;
+		overflow: auto;
 		position: absolute;
 		top: -32px;
 		left: 0;
+		z-index: 1;
     }
 	.description {
         font-weight: bold;
 		background-color: rgba(255, 255, 255, .4);
 		width: 100%;
 		height: 60px;
-		overflow: hidden;
+		overflow: auto;
 		position: absolute;
 		bottom: -60px;
 		left: 0;
+		z-index: 1;
+	}
+	.description::-webkit-scrollbar, .title::-webkit-scrollbar {
+		display: none;
 	}
 }
 
