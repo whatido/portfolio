@@ -52,7 +52,17 @@ body {
 	padding: unset !important;
 	margin: unset !important;
 }
-
+.welcome {
+	position: absolute;
+    bottom: 0;
+    left: 20px;
+    z-index: 99;
+    font-family: 'Changa One';
+    color: white;
+    font-size: 26px;
+    animation-name: tada;
+	animation-duration: 2s;
+}
 .live {
     font-family: 'Changa One';
     color: #FFF;
